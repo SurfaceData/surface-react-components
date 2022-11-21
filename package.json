@@ -18,7 +18,10 @@
   "files": ["README.md", "lib"],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/SurfaceData/surface-react-components.git"
+    "url": "https://github.com/SurfaceData/surface-react-components.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "dist": "npm run dist:dev && npm run dist:pro",
