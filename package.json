@@ -15,7 +15,10 @@
   "directories": {
     "lib": "cjs/"
   },
-  "files": ["README.md", "lib"],
+  "files": [
+    "README.md",
+    "lib"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/SurfaceData/surface-react-components.git"
@@ -97,7 +100,8 @@
   "dependencies": {
     "@chakra-ui/icons": "^1.0.0",
     "@npmcli/package-json": "^2.0.0",
-    "@redwoodjs/forms": "^2.0.0"
+    "@redwoodjs/forms": "^2.0.0",
+    "react-icons": "^4.6.0"
   },
   "peerDependencies": {
     "@chakra-ui/react": "1.8.9",
@@ -105,10 +109,15 @@
     "react-dom": ">=17.8.0"
   },
   "eslintConfig": {
-    "extends": ["react-app", "react-app/jest"],
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
     "overrides": [
       {
-        "files": ["**/*.stories.*"],
+        "files": [
+          "**/*.stories.*"
+        ],
         "rules": {
           "import/no-anonymous-default-export": "off"
         }
@@ -116,7 +125,11 @@
     ]
   },
   "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
