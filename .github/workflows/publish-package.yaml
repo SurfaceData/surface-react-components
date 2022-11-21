@@ -1,7 +1,7 @@
 name: Public package to npmjs
 on:
   release:
-    type: [created]
+    type: [published]
 
 jobs:
   build:
