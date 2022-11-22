@@ -15,10 +15,7 @@
   "directories": {
     "lib": "cjs/"
   },
-  "files": [
-    "README.md",
-    "lib"
-  ],
+  "files": ["README.md", "lib"],
   "repository": {
     "type": "git",
     "url": "https://github.com/SurfaceData/surface-react-components.git"
@@ -30,7 +27,7 @@
     "build": "npm run build:gulp && npm run dist && npm run build:types",
     "build:gulp": "gulp build --gulpfile scripts/gulpfile.js",
     "build:types": "npx tsc --emitDeclarationOnly --outDir lib/cjs && npx tsc --emitDeclarationOnly --outDir lib/esm",
-    "storybook": "start-storybook -p 6006 -s public",
+    "storybook": "start-storybook -p 6006",
     "test": "react-scripts test"
   },
   "devDependencies": {
@@ -110,15 +107,10 @@
     "react-dom": ">=17.8.0"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
+    "extends": ["react-app", "react-app/jest"],
     "overrides": [
       {
-        "files": [
-          "**/*.stories.*"
-        ],
+        "files": ["**/*.stories.*"],
         "rules": {
           "import/no-anonymous-default-export": "off"
         }
@@ -126,11 +118,7 @@
     ]
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
+    "production": [">0.2%", "not dead", "not op_mini all"],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
