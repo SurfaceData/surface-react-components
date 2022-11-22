@@ -99,6 +99,7 @@
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.0",
+    "@chakra-ui/styled-system": "^2.3.5",
     "@npmcli/package-json": "^2.0.0",
     "@redwoodjs/forms": "^2.0.0",
     "react-icons": "^4.6.0"
