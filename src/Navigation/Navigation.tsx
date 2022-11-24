@@ -17,7 +17,6 @@ const Navigation = (props: any) => {
 const NavItem = (props: any) => {
   return <Box {...props} />;
 };
-Navigation.NavItem = NavItem;
 
 export default Navigation;
 export { NavItem };

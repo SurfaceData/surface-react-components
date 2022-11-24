@@ -1,2 +1,3 @@
-import Navigation from "./Navigation";
+import Navigation, { NavItem } from "./Navigation";
 export default Navigation;
+export { NavItem };
