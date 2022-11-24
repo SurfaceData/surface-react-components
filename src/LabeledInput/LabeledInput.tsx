@@ -12,7 +12,9 @@ const LabeledInput = (props: any) => {
   const styles = useMultiStyleConfig("LabeledInput", { size, variant });
   return (
     <Box __css={styles.box} position="relative" display="flex">
-      <Text {...styles.text}>{label}</Text>
+      <Box as={Text} __css={styles.text}>
+        {label}
+      </Box>
       <Input size={size} {...styles.input} {...rest}></Input>
     </Box>
   );

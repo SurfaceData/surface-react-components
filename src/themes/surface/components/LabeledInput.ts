@@ -53,6 +53,7 @@ const LabeledInput = helpers.defineMultiStyleConfig({
       },
     },
   },
+  variants: {},
   defaultProps: {
     size: "md",
   },
