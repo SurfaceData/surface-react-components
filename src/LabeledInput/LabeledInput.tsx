@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  useMultiStyleConfig,
-  Box,
-  Input,
-  StylesProvider,
-  Text,
-} from "@chakra-ui/react";
+import { useMultiStyleConfig, Box, Input, Text } from "@chakra-ui/react";
 
 const LabeledInput = (props: any) => {
   const { size, variant, label, ...rest } = props;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, Box, Flex, HStack, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, HStack } from "@chakra-ui/react";
 
 const Navigation = (props: any) => {
   const { children, variant, avatar, logo, ...rest } = props;
@@ -17,6 +17,7 @@ const Navigation = (props: any) => {
 const NavItem = (props: any) => {
   return <Box {...props} />;
 };
+Navigation.NavItem = NavItem;
 
 export default Navigation;
 export { NavItem };
