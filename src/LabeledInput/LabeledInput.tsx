@@ -1,7 +1,7 @@
 import React from "react";
 import { useMultiStyleConfig, Box, Input, Text } from "@chakra-ui/react";
 
-const LabeledInput = (props: any) => {
+const LabeledInput = React.forwardRef((props: any, ref) => {
   const { size, variant, label, ...rest } = props;
   const styles = useMultiStyleConfig("LabeledInput", { size, variant });
   return (
@@ -9,9 +9,9 @@ const LabeledInput = (props: any) => {
       <Box as={Text} __css={styles.text}>
         {label}
       </Box>
-      <Input size={size} {...styles.input} {...rest}></Input>
+      <Input size={size} ref={ref} {...styles.input} {...rest}></Input>
     </Box>
   );
-};
+});
 
 export default LabeledInput;
