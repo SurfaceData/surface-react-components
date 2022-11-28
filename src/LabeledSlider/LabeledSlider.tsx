@@ -34,7 +34,7 @@ const LabeledSlider = (props: any) => {
           {...rest}
         >
           {marks &&
-            marks.map(({ value, label }: any, index) => (
+            marks.map(({ value, label }: any, index: number) => (
               <SliderMark key={index} __css={styles.mark} value={value}>
                 {label}
               </SliderMark>
