@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Avatar, Image, Link } from "@chakra-ui/react";
 
+import Button from "../Button";
 import Navigation, { NavItem } from "./Navigation";
 
 export default {
@@ -30,4 +31,10 @@ Basic.args = {
       </NavItem>
     </>
   ),
+};
+
+export const LargeAvatar = Template.bind({});
+LargeAvatar.args = {
+  logo: <Image src="/surface-data.svg" />,
+  avatar: <Button size="sm">Button!</Button>,
 };

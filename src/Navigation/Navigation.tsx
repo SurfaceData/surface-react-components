@@ -8,7 +8,7 @@ const Navigation = (props: any) => {
       <Flex justify="space-between" width="full">
         {logo && <Box boxSize="48px">{logo}</Box>}
         <HStack spacing="12px">{children}</HStack>
-        {avatar && <Box boxSize="48px">{avatar}</Box>}
+        {avatar && <Box>{avatar}</Box>}
       </Flex>
     </Box>
   );
