@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Avatar, Image, Link } from "@chakra-ui/react";
 
-import Navigation from "./Navigation";
+import Navigation, { NavItem } from "./Navigation";
 
 export default {
   title: "Components/Navigation",
@@ -22,12 +22,12 @@ Basic.args = {
   avatar: <Avatar src="/keith-profile.jpg" />,
   children: (
     <>
-      <Navigation.NavItem>
+      <NavItem>
         <Link>Home</Link>
-      </Navigation.NavItem>
-      <Navigation.NavItem>
+      </NavItem>
+      <NavItem>
         <Link>About</Link>
-      </Navigation.NavItem>
+      </NavItem>
     </>
   ),
 };

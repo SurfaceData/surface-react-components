@@ -2,13 +2,13 @@ import React from "react";
 import { Box, Flex, HStack } from "@chakra-ui/react";
 
 const Navigation = (props: any) => {
-  const { children, variant, avatar, logo, ...rest } = props;
+  const { children, avatar, logo } = props;
   return (
     <Box as="nav" px="4" py="4" width="full" display="flex">
       <Flex justify="space-between" width="full">
-        <Box boxSize="48px">{logo}</Box>
+        {logo && <Box boxSize="48px">{logo}</Box>}
         <HStack spacing="12px">{children}</HStack>
-        <Box boxSize="48px">{avatar}</Box>
+        {avatar && <Box boxSize="48px">{avatar}</Box>}
       </Flex>
     </Box>
   );
