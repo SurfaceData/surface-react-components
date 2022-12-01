@@ -1,50 +1,10 @@
 import { createMultiStyleConfigHelpers } from "@chakra-ui/styled-system";
 
-const helpers = createMultiStyleConfigHelpers([
-  "box",
-  "input",
-  "mark",
-  "shell",
-  "text",
-]);
+const helpers = createMultiStyleConfigHelpers(["box", "text", "textarea"]);
 
-const LabeledSlider = helpers.defineMultiStyleConfig({
+const LabeledTextarea = helpers.defineMultiStyleConfig({
   baseStyle: {
     box: {},
-    input: {
-      border: "1px",
-      borderStyle: "solid",
-      borderColor: "brand.500",
-      outlineOffset: "0",
-      _focus: {
-        borderColor: "brand.800",
-        outline: "1px",
-        outlineStyle: "solid",
-        outlineColor: "brand.900",
-      },
-    },
-    mark: {
-      mt: 4,
-      ml: -2,
-      fontSize: "sm",
-    },
-    shell: {
-      border: "1px",
-      borderRadius: 1,
-      borderStyle: "solid",
-      borderColor: "brand.500",
-      outlineOffset: "0",
-      pt: 4,
-      pb: 6,
-      px: 4,
-      width: "100%",
-      _focus: {
-        borderColor: "brand.800",
-        outline: "1px",
-        outlineStyle: "solid",
-        outlineColor: "brand.900",
-      },
-    },
     text: {
       bg: "white",
       marginStart: "2",
@@ -52,6 +12,19 @@ const LabeledSlider = helpers.defineMultiStyleConfig({
       px: "1",
       translate: "no",
       zIndex: "2",
+    },
+    textarea: {
+      border: "1px",
+      borderRadius: 1,
+      borderStyle: "solid",
+      borderColor: "brand.500",
+      outlineOffset: "0",
+      _focus: {
+        borderColor: "brand.800",
+        outline: "1px",
+        outlineStyle: "solid",
+        outlineColor: "brand.900",
+      },
     },
   },
   sizes: {
@@ -86,4 +59,4 @@ const LabeledSlider = helpers.defineMultiStyleConfig({
   },
 });
 
-export default LabeledSlider;
+export default LabeledTextarea;

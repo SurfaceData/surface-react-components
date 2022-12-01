@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import {
   useMultiStyleConfig,
   Box,
+  Flex,
+  NumberDecrementStepper,
+  NumberInput,
+  NumberInputField,
+  NumberInputStepper,
+  NumberIncrementStepper,
   Slider,
   SliderFilledTrack,
   SliderMark,
@@ -17,7 +23,7 @@ const LabeledSlider = (props: any) => {
   const [sliderValue, setSliderValue] = useState(defaultValue);
   const styles = useMultiStyleConfig("LabeledSlider", { size, variant });
 
-  const onInternalChange = (value: number) => {
+  const onInternalChange = (value: any) => {
     setSliderValue(value);
     onChange && onChange(value);
   };
@@ -28,33 +34,38 @@ const LabeledSlider = (props: any) => {
         {label}
       </Box>
       <Box __css={styles.shell}>
-        <Slider
-          onChange={onInternalChange}
-          defaultValue={defaultValue}
-          {...rest}
-        >
-          {marks &&
-            marks.map(({ value, label }: any, index: number) => (
-              <SliderMark key={index} __css={styles.mark} value={value}>
-                {label}
-              </SliderMark>
-            ))}
-          <SliderMark
+        <Flex>
+          <NumberInput
+            maxW="100px"
+            mr="2rem"
             value={sliderValue}
-            textAlign="center"
-            bg="brand.500"
-            color="white"
-            mt="-10"
-            ml="-5"
-            px="3"
+            onChange={onInternalChange}
           >
-            {sliderValue}
-          </SliderMark>
-          <SliderTrack>
-            <SliderFilledTrack bg="brand.900" />
-          </SliderTrack>
-          <SliderThumb />
-        </Slider>
+            <NumberInputField type="number" {...styles.input} {...rest} />
+            <NumberInputStepper>
+              <NumberIncrementStepper />
+              <NumberDecrementStepper />
+            </NumberInputStepper>
+          </NumberInput>
+
+          <Slider
+            value={sliderValue}
+            onChange={onInternalChange}
+            flex="1"
+            focusThumbOnChange={false}
+          >
+            {marks &&
+              marks.map(({ value, label }: any, index: number) => (
+                <SliderMark key={index} __css={styles.mark} value={value}>
+                  {label}
+                </SliderMark>
+              ))}
+            <SliderTrack>
+              <SliderFilledTrack bg="brand.900" />
+            </SliderTrack>
+            <SliderThumb fontSize="xs" boxSize="32px" children={sliderValue} />
+          </Slider>
+        </Flex>
       </Box>
     </Box>
   );
