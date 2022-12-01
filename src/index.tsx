@@ -1,4 +1,5 @@
 export { default as Button } from "./Button";
+export { default as Details } from "./Details";
 export { default as Footer } from "./Footer";
 export { default as LabeledInput } from "./LabeledInput";
 export { default as LabeledSelect } from "./LabeledSelect";

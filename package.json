@@ -1,7 +1,7 @@
 {
   "name": "@surfacedata/sd-components",
   "description": "React based components for Surface Data projects",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "author": "Surface Data",
   "private": false,
   "license": "MPL-2.0",
