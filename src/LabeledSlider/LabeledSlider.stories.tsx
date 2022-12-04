@@ -17,7 +17,7 @@ Default.args = {
   label: "Name",
   defaultValue: 5,
   min: 0,
-  max: 100,
+  max: 80,
   marks: [
     { value: "25", label: "25" },
     { value: "50", label: "50" },

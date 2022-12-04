@@ -11,7 +11,8 @@ import {
 } from "@chakra-ui/react";
 
 const LabeledNumberInput = React.forwardRef((props: any, ref) => {
-  const { size, label, onChange, defaultValue, marks, ...rest } = props;
+  const { size, label, onChange, defaultValue, min, max, marks, ...rest } =
+    props;
 
   const [value, setValue] = useState(defaultValue);
   const styles = useMultiStyleConfig("LabeledNumberInput", { size });
@@ -26,7 +27,12 @@ const LabeledNumberInput = React.forwardRef((props: any, ref) => {
       <Box as={Text} __css={styles.text}>
         {label}
       </Box>
-      <NumberInput value={value} onChange={onInternalChange}>
+      <NumberInput
+        value={value}
+        onChange={onInternalChange}
+        min={min}
+        max={max}
+      >
         <NumberInputField {...styles.input} {...rest} />
         <NumberInputStepper>
           <NumberIncrementStepper />

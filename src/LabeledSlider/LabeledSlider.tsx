@@ -17,17 +17,26 @@ import {
 } from "@chakra-ui/react";
 
 const LabeledSlider = (props: any) => {
-  const { size, variant, label, onChange, defaultValue, marks, ...rest } =
-    props;
+  const {
+    size,
+    variant,
+    label,
+    onChange,
+    defaultValue,
+    min,
+    max,
+    marks,
+    ...rest
+  } = props;
 
   const [sliderValue, setSliderValue] = useState(defaultValue);
-  const styles = useMultiStyleConfig("LabeledSlider", { size, variant });
 
   const onInternalChange = (value: any) => {
     setSliderValue(value);
     onChange && onChange(value);
   };
 
+  const styles = useMultiStyleConfig("LabeledSlider", { size, variant });
   return (
     <Box __css={styles.box} position="relative" display="flex">
       <Box as={Text} __css={styles.text}>
@@ -38,19 +47,22 @@ const LabeledSlider = (props: any) => {
           <NumberInput
             maxW="100px"
             mr="2rem"
+            min={min}
+            max={max}
             value={sliderValue}
             onChange={onInternalChange}
           >
-            <NumberInputField type="number" {...styles.input} {...rest} />
+            <NumberInputField {...styles.input} {...rest} />
             <NumberInputStepper>
               <NumberIncrementStepper />
               <NumberDecrementStepper />
             </NumberInputStepper>
           </NumberInput>
-
           <Slider
             value={sliderValue}
             onChange={onInternalChange}
+            min={min}
+            max={max}
             flex="1"
             focusThumbOnChange={false}
           >
